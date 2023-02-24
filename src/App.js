@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Greeting from './Components/Greeting';
+import RandomText from './Components/RandomText';
+import Number from './Components/Number';
+import RandomText2 from './Components/RandomText2';
+import DaugTeksto from './Components/DaugTeksto';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const randomText = 'Bet koks tekstas';
+	const rndNum = Math.floor(Math.random() * 2 + 1);
+
+	const rndText1 = 'Jurga, galvoji teksta?';
+	const rndText2 = 'Enzo, siulo teksta....';
+
+	const rndColor = 'orange';
+
+	return (
+		<div className='App'>
+			<Greeting />
+			<RandomText text={randomText} />
+			<Number num={rndNum} />
+			<RandomText2 text={rndText1} text2={rndText2} />
+			<DaugTeksto text={rndText1} text2={rndText2} color={rndColor} />
+		</div>
+	);
 }
 
 export default App;
